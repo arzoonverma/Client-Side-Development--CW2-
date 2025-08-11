@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinations - Ocean Path Travel</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+
+        body { background: #f7f8fa; color: #333; }
+
+        header { background: linear-gradient(90deg, #0077b6, #00b4d8); color: #fff; padding: 20px; text-align: center; font-size: 32px; font-weight: bold; position: sticky; top: 0; z-index: 100; }
+
+        nav { background: #023e8a; padding: 12px 0; display: flex; justify-content: center; }
+
+        nav ul { list-style: none; display: flex; gap: 30px; }
+
+        nav ul li a { color: #fff; text-decoration: none; font-size: 18px; padding: 8px 16px; border-radius: 5px; transition: 0.3s; }
+
+        nav ul li a.active, nav ul li a:hover { background: #00b4d8; }
+
+        .destinations { text-align: center; padding: 70px 20px; max-width: 1200px; margin: auto; }
+
+        .destinations h1 { font-size: 42px; color: #023e8a; margin-bottom: 20px; }
+
+        .destinations p.intro { font-size: 18px; color: #555; margin-bottom: 40px; line-height: 1.6; }
+
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+
+        .card { background: #fff; border-radius: 15px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.1); transition: transform 0.4s ease, box-shadow 0.4s ease; opacity: 0; transform: translateY(50px); position: relative; }
+
+        .card img { width: 100%; height: 200px; object-fit: cover; transition: transform 0.3s ease; }
+
+        .card:hover img { transform: scale(1.15); }
+
+        .card h3 { font-size: 24px; margin: 15px 0 8px; color: #0077b6; }
+
+        .card p { font-size: 18px; margin-bottom: 15px; color: #444; }
+
+        .card:hover { transform: translateY(-10px) scale(1.03); box-shadow: 0 15px 35px rgba(0,0,0,0.2); }
+
+        footer { text-align: center; background: #023e8a; color: #fff; padding: 25px; margin-top: 50px; }
+
+        @media (max-width: 768px) { nav ul { flex-direction: column; gap: 15px; } .destinations h1 { font-size: 32px; } }
+    </style>
+</head>
+<body>
+    <header>🌊 Ocean Path Travel</header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="destinations.html" class="active">Destinations</a></li>
+            <li><a href="booking.html">Booking</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="destinations">
+        <h1>Our Top Destinations</h1>
+        <p class="intro">Explore the most breathtaking destinations around the globe. From romantic getaways to adventurous escapes, Ocean Path Travel brings you the best travel experiences at unbeatable prices.</p>
+        <div class="grid">
+            <div class="card">
+                <img src="pexels-suissounet-1530259.jpg" alt="Paris">
+                <h3>Paris</h3>
+                <p>$1200 per person</p>
+            </div>
+            <div class="card">
+                <img src="pexels-asadphoto-1450363.jpg" alt="Maldives">
+                <h3>Maldives</h3>
+                <p>$1500 per person</p>
+            </div>
+            <div class="card">
+                <img src="pexels-apasaric-2506923.jpg" alt="Tokyo">
+                <h3>Tokyo</h3>
+                <p>$1800 per person</p>
+            </div>
+            <div class="card">
+                <img src="pexels-lkloeppel-466685.jpg" alt="New York">
+                <h3>New York</h3>
+                <p>$2000 per person</p>
+            </div>
+            <div class="card">
+                <img src="pexels-nextvoyage-1470502.jpg" alt="Dubai">
+                <h3>Dubai</h3>
+                <p>$1700 per person</p>
+            </div>
+            <div class="card">
+                <img src="pexels-julius-silver-240301-753639.jpg" alt="Rome">
+                <h3>Rome</h3>
+                <p>$1600 per person</p>
+            </div>
+            <div class="card">
+                <img src="pexels-ollivves-931007.jpg" alt="Bali">
+                <h3>Bali</h3>
+                <p>$1400 per person</p>
+            </div>
+            <div class="card">
+                <img src="pexels-dominikagregus-672532.jpg" alt="London">
+                <h3>London</h3>
+                <p>$1900 per person</p>
+            </div>
+            <div class="card">
+                <img src="pexels-brettstone-2845013.jpg" alt="Sydney">
+                <h3>Sydney</h3>
+                <p>$1850 per person</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Ocean Path Travel. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        const cards = document.querySelectorAll('.card');
+        window.addEventListener('scroll', () => {
+            cards.forEach(card => {
+                const cardTop = card.getBoundingClientRect().top;
+                if (cardTop < window.innerHeight - 50) {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                    card.style.transition = 'all 0.8s ease-out';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

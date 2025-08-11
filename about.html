@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Ocean Path Travel</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #f7f8fa;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background: linear-gradient(90deg, #0077b6, #00b4d8);
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            font-size: 32px;
+            font-weight: bold;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            background: #023e8a;
+            padding: 12px 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 8px 16px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        nav ul li a.active, nav ul li a:hover {
+            background: #00b4d8;
+        }
+
+        .about-section {
+            flex: 1;
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: center;
+            padding: 60px 20px;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .about-section img {
+            flex: 1 1 400px;
+            max-width: 500px;
+            border-radius: 15px;
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+            animation: zoomIn 1.5s ease;
+        }
+
+        .about-content {
+            flex: 1 1 400px;
+        }
+
+        .about-content h1 {
+            font-size: 42px;
+            color: #023e8a;
+            margin-bottom: 20px;
+        }
+
+        .about-content p {
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        footer {
+            text-align: center;
+            background: #023e8a;
+            color: #fff;
+            padding: 25px;
+            margin-top: 50px;
+        }
+
+        @keyframes fadeIn {
+            from {opacity: 0; transform: translateY(30px);} 
+            to {opacity: 1; transform: translateY(0);}
+        }
+
+        @keyframes zoomIn {
+            from {opacity: 0; transform: scale(0.8);} 
+            to {opacity: 1; transform: scale(1);}
+        }
+    </style>
+</head>
+<body>
+    <header>🌊 Ocean Path Travel</header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html" class="active">About</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="booking.html">Booking</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="about-section">
+        <img src="pexels-te-lensfix-380994-1371360.jpg" alt="Travel Adventure">
+        <div class="about-content">
+            <h1>About Ocean Path Travel</h1>
+            <p>Ocean Path Travel is your trusted travel partner, dedicated to making your dream vacations a reality. With years of experience and a passion for exploration, we specialize in curating personalized travel packages for every traveler.</p>
+            <p>Our mission is simple – to provide seamless and memorable travel experiences. Whether you're planning a relaxing beach holiday, an exotic cultural trip, or a thrilling adventure, we are here to make it happen effortlessly.</p>
+            <p>We work with top-rated resorts, airlines, and local guides to ensure quality and comfort in every journey. From affordable deals to luxury escapes, we cater to all travel preferences.</p>
+            <p>Join thousands of happy travelers who trust us for unforgettable journeys across the globe. Your next adventure begins here with Ocean Path Travel – where every path leads to a new horizon.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Ocean Path Travel. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

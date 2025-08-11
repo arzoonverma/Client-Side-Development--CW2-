@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ocean Path Travel - Explore the World</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
+
+    <style>
+        * {margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif;}
+        body {background: #f8f9fa; color: #333; overflow-x: hidden;}
+
+        header {
+            background: linear-gradient(90deg,#0077b6,#00b4d8);
+            color: #fff; text-align: center; padding: 25px; font-size: 36px; font-weight: bold;
+            position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        nav {
+            background: #023e8a; display: flex; justify-content: center; align-items: center; padding: 15px 0;
+        }
+
+        nav ul {list-style: none; display: flex; gap: 30px;}
+        nav ul li a {
+            color: #fff; text-decoration: none; font-size: 18px; padding: 10px 18px; border-radius: 6px;
+            transition: 0.3s;
+        }
+        nav ul li a:hover {background: #00b4d8; color: #fff;}
+
+        .hero {
+            text-align: center; padding: 150px 20px; color: #fff;
+            background: linear-gradient(rgba(0,62,138,0.65), rgba(0,62,138,0.65)), url('images/hero-bg.jpg') center/cover no-repeat;
+            animation: fadeIn 2s ease;
+        }
+
+        .hero h1 {font-size: 60px; font-weight: 700; margin-bottom: 20px;}
+        .hero p {font-size: 22px; max-width: 800px; margin: auto; line-height: 1.8;}
+
+        .btn {
+            display: inline-block; margin-top: 30px; padding: 16px 40px; font-size: 20px;
+            background: #ff5722; color: #fff; border-radius: 50px; text-decoration: none; font-weight: bold;
+            transition: transform 0.3s, background 0.3s;
+        }
+        .btn:hover {background: #e64a19; transform: scale(1.08);}
+
+        @keyframes fadeIn {from {opacity: 0;} to {opacity: 1;}}
+
+        .section {padding: 80px 20px; max-width: 1200px; margin: auto; text-align: center;}
+        .section h2 {font-size: 42px; margin-bottom: 30px; color: #023e8a; position: relative;}
+        .section h2::after {
+            content: ''; width: 80px; height: 4px; background: #00b4d8; display: block; margin: 10px auto 0; border-radius: 3px;
+        }
+
+        .section p {font-size: 20px; color: #555; line-height: 1.8; max-width: 900px; margin: 0 auto 30px;}
+
+        .cards {display: flex; flex-wrap: wrap; justify-content: center; gap: 30px;}
+        .card {
+            background: #fff; border-radius: 15px; box-shadow: 0 8px 20px rgba(0,0,0,0.1); overflow: hidden;
+            width: 320px; transition: 0.4s; cursor: pointer;
+        }
+        .card img {width: 100%; height: 220px; object-fit: cover;}
+        .card h3 {font-size: 26px; margin: 15px 0; color: #0077b6;}
+        .card p {padding: 0 20px 25px; color: #555;}
+        .card:hover {transform: translateY(-12px); box-shadow: 0 15px 30px rgba(0,0,0,0.25);}
+
+        footer {background: #023e8a; color: #fff; text-align: center; padding: 30px; font-size: 18px; margin-top: 60px;}
+
+        @media(max-width: 768px){
+            nav ul {flex-direction: column; gap: 15px;}
+            .hero h1 {font-size: 40px;}
+            .cards {flex-direction: column; align-items: center;}
+        }
+    </style>
+</head>
+<body>
+    <header>🌊 Ocean Path Travel</header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="booking.html">Booking</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <h1>Discover the World Like Never Before</h1>
+        <p>Welcome to Ocean Path Travel – your trusted travel partner! We design journeys that redefine luxury and adventure. Whether it's serene beaches, vibrant cities, or hidden gems, we ensure a personalized experience for every traveler.</p>
+        <p>Enjoy top-notch services, expert guidance, and exclusive deals tailored just for you. Your dream vacation starts here – let's make memories that last a lifetime.</p>
+        <a href="booking.html" class="btn">Start Your Journey</a>
+    </section>
+
+    <section class="section">
+        <h2>Popular Destinations</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="pexels-suissounet-1530259.jpg" alt="Paris">
+                <h3>Paris</h3>
+                <p>The romantic city of lights invites you to explore its art, culture, and culinary delights. A must-visit for unforgettable moments.</p>
+            </div>
+            <div class="card">
+                <img src="pexels-asadphoto-1450363.jpg" alt="Maldives">
+                <h3>Maldives</h3>
+                <p>Immerse yourself in the breathtaking beauty of turquoise waters, sandy beaches, and luxury resorts – a true paradise on Earth.</p>
+            </div>
+            <div class="card">
+                <img src="pexels-apasaric-2506923.jpg" alt="Tokyo">
+                <h3>Tokyo</h3>
+                <p>Experience the perfect blend of tradition and modernity with stunning cityscapes, ancient temples, and exquisite cuisine.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Our Services</h2>
+        <p>Ocean Path Travel offers curated travel packages, personalized itineraries, visa assistance, and 24/7 customer support. From family vacations to solo adventures, we provide seamless planning and execution to make your trip unforgettable.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Ocean Path Travel. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Add smooth scroll effect
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({behavior: 'smooth'});
+            });
+        });
+    </script>
+</body>
+</html>

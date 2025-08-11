@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Ocean Path Travel</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #f7f8fa;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background: linear-gradient(90deg, #0077b6, #00b4d8);
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            font-size: 32px;
+            font-weight: bold;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            background: #023e8a;
+            padding: 12px 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 8px 16px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        nav ul li a.active, nav ul li a:hover {
+            background: #00b4d8;
+        }
+
+        .contact-section {
+            flex: 1;
+            text-align: center;
+            padding: 70px 20px;
+            max-width: 800px;
+            margin: auto;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .contact-section h1 {
+            font-size: 42px;
+            color: #023e8a;
+            margin-bottom: 15px;
+        }
+
+        .contact-section p.info {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #555;
+        }
+
+        form {
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+        }
+
+        form input, form textarea {
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 18px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            outline: none;
+            transition: border 0.3s ease;
+        }
+
+        form input:focus, form textarea:focus {
+            border: 1px solid #00b4d8;
+        }
+
+        form textarea {
+            resize: none;
+            height: 120px;
+        }
+
+        form button {
+            width: 100%;
+            padding: 14px;
+            font-size: 18px;
+            background: #0077b6;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        form button:hover {
+            background: #023e8a;
+        }
+
+        #contactMessage {
+            font-weight: bold;
+            margin-top: 12px;
+        }
+
+        footer {
+            text-align: center;
+            background: #023e8a;
+            color: #fff;
+            padding: 25px;
+            margin-top: 50px;
+        }
+
+        @keyframes fadeIn {
+            from {opacity: 0; transform: translateY(30px);} 
+            to {opacity: 1; transform: translateY(0);}
+        }
+    </style>
+</head>
+<body>
+    <header>🌊 Ocean Path Travel</header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="booking.html">Booking</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="contact-section">
+        <h1>Contact Us</h1>
+        <p class="info">Email: oceanpathtravel@gmail.com | Phone: +44 7658879031</p>
+        <form id="contactForm">
+            <input type="text" id="cname" placeholder="Your Name" required>
+            <input type="email" id="cemail" placeholder="Your Email" required>
+            <textarea id="cmessage" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+            <p id="contactMessage"></p>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Ocean Path Travel. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('contactForm');
+            const message = document.getElementById('contactMessage');
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                message.textContent = '✅ Thank you! Your message has been sent.';
+                message.style.color = '#0077b6';
+            });
+        });
+    </script>
+</body>
+</html>

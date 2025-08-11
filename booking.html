@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking - Ocean Path Travel</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #f7f8fa;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background: linear-gradient(90deg, #0077b6, #00b4d8);
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            font-size: 32px;
+            font-weight: bold;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            background: #023e8a;
+            padding: 12px 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 8px 16px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        nav ul li a.active, nav ul li a:hover {
+            background: #00b4d8;
+        }
+
+        .booking-section {
+            flex: 1;
+            text-align: center;
+            padding: 70px 20px;
+            max-width: 900px;
+            margin: auto;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .booking-section h1 {
+            font-size: 42px;
+            color: #023e8a;
+            margin-bottom: 15px;
+        }
+
+        .booking-section p.info {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #555;
+        }
+
+        form {
+            background: #fff;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+        }
+
+        form input, form select {
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 18px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            outline: none;
+            transition: border 0.3s ease;
+        }
+
+        form input:focus, form select:focus {
+            border: 1px solid #00b4d8;
+        }
+
+        form button {
+            width: 100%;
+            padding: 14px;
+            font-size: 18px;
+            background: #0077b6;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        form button:hover {
+            background: #023e8a;
+        }
+
+        #bookingMessage {
+            font-weight: bold;
+            margin-top: 12px;
+        }
+
+        footer {
+            text-align: center;
+            background: #023e8a;
+            color: #fff;
+            padding: 25px;
+            margin-top: 50px;
+        }
+
+        @keyframes fadeIn {
+            from {opacity: 0; transform: translateY(30px);} 
+            to {opacity: 1; transform: translateY(0);}
+        }
+    </style>
+</head>
+<body>
+    <header>🌊 Ocean Path Travel</header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="booking.html" class="active">Booking</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="booking-section">
+        <h1>Book Your Dream Trip</h1>
+        <p class="info">Fill out the form below to book your adventure with Ocean Path Travel.</p>
+        
+        <form id="bookingForm">
+            <input type="text" id="bname" placeholder="Full Name" required>
+            <input type="email" id="bemail" placeholder="Email Address" required>
+            <input type="tel" id="bphone" placeholder="Phone Number" required>
+            
+            <select id="bdestination" required>
+                <option value="">Select Destination</option>
+                <option value="Maldives">Maldives</option>
+                <option value="Bali">Bali</option>
+                <option value="London">London</option>
+                <option value="Paris">Paris</option>
+                <option value="Tokyo">Tokyo</option>
+                <option value="New York">New York</option>
+                <option value="Dubai">Dubai</option>
+                <option value="Rome">Rome</option>
+                <option value="Sydney">Sydney</option>
+            </select>
+            
+            <input type="date" id="bdate" required>
+            <input type="number" id="bguests" placeholder="Number of Guests" min="1" required>
+            
+            <button type="submit">Confirm Booking</button>
+            <p id="bookingMessage"></p>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Ocean Path Travel. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('bookingForm');
+            const message = document.getElementById('bookingMessage');
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                message.textContent = '✅ Thank you! Your booking has been confirmed.';
+                message.style.color = '#0077b6';
+                form.reset();
+            });
+        });
+    </script>
+</body>
+</html>
