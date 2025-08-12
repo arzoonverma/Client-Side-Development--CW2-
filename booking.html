@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -58,7 +59,8 @@
             transition: 0.3s;
         }
 
-        nav ul li a.active, nav ul li a:hover {
+        nav ul li a.active,
+        nav ul li a:hover {
             background: #00b4d8;
         }
 
@@ -87,10 +89,11 @@
             background: #fff;
             padding: 35px;
             border-radius: 15px;
-            box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
         }
 
-        form input, form select {
+        form input,
+        form select {
             width: 100%;
             padding: 14px;
             margin-bottom: 18px;
@@ -101,7 +104,8 @@
             transition: border 0.3s ease;
         }
 
-        form input:focus, form select:focus {
+        form input:focus,
+        form select:focus {
             border: 1px solid #00b4d8;
         }
 
@@ -135,11 +139,19 @@
         }
 
         @keyframes fadeIn {
-            from {opacity: 0; transform: translateY(30px);} 
-            to {opacity: 1; transform: translateY(0);}
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     </style>
 </head>
+
 <body>
     <header>🌊 Ocean Path Travel</header>
 
@@ -156,12 +168,12 @@
     <section class="booking-section">
         <h1>Book Your Dream Trip</h1>
         <p class="info">Fill out the form below to book your adventure with Ocean Path Travel.</p>
-        
+
         <form id="bookingForm">
             <input type="text" id="bname" placeholder="Full Name" required>
             <input type="email" id="bemail" placeholder="Email Address" required>
             <input type="tel" id="bphone" placeholder="Phone Number" required>
-            
+
             <select id="bdestination" required>
                 <option value="">Select Destination</option>
                 <option value="Maldives">Maldives</option>
@@ -174,10 +186,10 @@
                 <option value="Rome">Rome</option>
                 <option value="Sydney">Sydney</option>
             </select>
-            
+
             <input type="date" id="bdate" required>
             <input type="number" id="bguests" placeholder="Number of Guests" min="1" required>
-            
+
             <button type="submit">Confirm Booking</button>
             <p id="bookingMessage"></p>
         </form>
@@ -193,11 +205,12 @@
             const message = document.getElementById('bookingMessage');
             form.addEventListener('submit', (e) => {
                 e.preventDefault();
-                message.textContent = '✅ Thank you! Your booking has been confirmed.';
+                message.textContent = '✅ Congratulations! Your booking has been confirmed. Enjoy your Holiday';
                 message.style.color = '#0077b6';
                 form.reset();
             });
         });
     </script>
 </body>
+
 </html>
